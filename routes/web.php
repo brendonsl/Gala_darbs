@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\Job;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\JobController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+// All Jobs
+Route::get('/', [JobController::class, 'index']);
+// Single Job
+Route::get('/Jobs/{Job}', [JobController::class, 'show']);
