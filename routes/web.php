@@ -16,5 +16,10 @@ use App\Http\Controllers\JobController;
 */
 // All Jobs
 Route::get('/', [JobController::class, 'index']);
+
+
+// show create Form
+Route::get('/Jobs/create', [JobController::class, 'create']);
+
 // Single Job
 Route::get('/Jobs/{Job}', [JobController::class, 'show']);

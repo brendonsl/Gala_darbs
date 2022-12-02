@@ -46,20 +46,14 @@
             </ul>
         </nav>
         <main>
-    {{-- VIW OUTPUT --}}
-    @yield('content')
+            {{$slot}}
         </main>
-
+        <footer 
+        class="bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center"
+        >
+        <div style="margin-right:10px" class="bottom-5 right-1 bg-black text-white py-2 px-5">
+        <a href="/Jobs/create">Post Job</a>
+        </div>
+        </footer>
 </body>
-<footer 
-class="bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center"
->
-<p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
-
-<a
-    href="create.html"
-    class="absolute top-1/3 right-10 bg-black text-white py-2 px-5"
-    >Post Job</a
->
-</footer>
 </html>
