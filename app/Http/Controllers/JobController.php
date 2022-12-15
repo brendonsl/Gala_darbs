@@ -42,6 +42,6 @@ class JobController extends Controller
 
         Job::create($formFields);
 
-        return redirect('/')->with('message', 'Jobs created successfully!');
+        return redirect('/')->with('message', 'Jobs created successfully!'); 
     }
 }
