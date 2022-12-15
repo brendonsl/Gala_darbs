@@ -15,5 +15,9 @@
 @else
 <p>No Jobs found</p>
 @endunless
-    </div>
+</div>
+
+ <div class="mt-6 p-4">
+    {{$Jobs->links()}}
+ </div>
 </x-layout>
