@@ -34,7 +34,6 @@
                                 type="text"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="title"
-                                placeholder="Example: Senior Laravel Developer"
                                 value="{{old('title')}}"
                             />
                             @error('title')
@@ -52,7 +51,7 @@
                                 type="text"
                                 class="border border-gray-200 rounded p-2 w-full"
                                 name="location"
-                                placeholder="Example: Remote, Boston MA, etc"
+                                placeholder="Example: Remote, Boston MA"
                                 value="{{old('location')}}"
                             />
                             @error('location')
@@ -80,7 +79,7 @@
                                 for="website"
                                 class="inline-block text-lg mb-2"
                             >
-                                Website/Application URL
+                                Website URL
                             </label>
                             <input
                                 type="text"
@@ -109,9 +108,9 @@
                             @enderror
                         </div>
 
-                        {{--<div class="mb-6">
+                        <div class="mb-6">
                             <label for="logo" class="inline-block text-lg mb-2">
-                                Company Logo
+                                Logo
                             </label>
                             <input
                                 type="file"
@@ -119,7 +118,7 @@
                                 name="logo"
                             />
                             
-                        </div> --}}
+                        </div>
 
                         <div class="mb-6">
                             <label

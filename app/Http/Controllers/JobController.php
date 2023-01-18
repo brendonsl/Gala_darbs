@@ -8,14 +8,14 @@ use Illuminate\Validation\Rule;
 
 class JobController extends Controller
 {
-    //Show all listings
+    //Show all Jobs
     public function index() {
         return view('Jobs.index', [
             'Jobs' => Job::latest()->filter(request(['tag', 'search']))->simplePaginate(6)
         ]);
     }
 
-    //Show single listing
+    //Show single Jobs
     public function show(Job $Job) {
         return view('Jobs.show', [
             'Job' => $Job
@@ -39,6 +39,10 @@ class JobController extends Controller
             'tags' => 'required',
             'description' => 'required'
         ]);
+
+        if($request->hasFile('logo')) {
+            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        }
 
         Job::create($formFields);
 
